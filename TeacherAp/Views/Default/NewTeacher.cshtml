@@ -1,0 +1,25 @@
+﻿@model TeacherAp.Models.Teacher
+
+@{
+    ViewData["Title"] = "NewTeacher";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<br />
+<form class="form-group" method="post">
+
+    <b>Name</b>
+    @Html.TextBoxFor(x=>x.Name,new {@class="form-control"})
+    <b>Surname</b>
+    @Html.TextBoxFor(x => x.Surname, new { @class = "form-control" })
+    <b>Gender</b>
+    @Html.TextBoxFor(x => x.Gender, new { @class = "form-control" })
+    <b>Subject</b>
+    @Html.TextBoxFor(x => x.Subject, new { @class = "form-control" })
+    <b>Age</b>
+    @Html.TextBoxFor(x => x.Age, new { @class = "form-control" })
+   <br />
+   <button class="btn btn-info">Add New Teacher</button>
+   
+</form>
+

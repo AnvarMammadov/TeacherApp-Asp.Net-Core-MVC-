@@ -1,0 +1,24 @@
+﻿@model TeacherAp.Models.Teacher
+@{
+    ViewData["Title"] = "GetTeacher";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+@using(Html.BeginForm("UpdateTeacher","default",FormMethod.Post)){
+
+    <b>Teacher ID</b>
+    @Html.TextBoxFor(x => x.TeacherID, new { @class = "form-control" })
+    <b>Name</b>
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    <b>Surname</b>
+    @Html.TextBoxFor(x => x.Surname, new { @class = "form-control" })
+    <b>Gender</b>
+    @Html.TextBoxFor(x => x.Gender, new { @class = "form-control" })
+    <b>Subject</b>
+    @Html.TextBoxFor(x => x.Subject, new { @class = "form-control" })
+    <b>Age</b>
+    @Html.TextBoxFor(x => x.Age, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Update Teacher</button>
+}
+

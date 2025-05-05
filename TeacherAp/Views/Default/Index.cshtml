@@ -1,0 +1,37 @@
+﻿@using TeacherAp.Models
+@model List<Teacher>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Gender</th>
+        <th>Subject</th>
+        <th>Age</th>
+        <th>Delete</th>
+        <th>Update</th>
+
+       
+    </tr>
+    @foreach(var t in Model){
+
+    <tr>
+        <td>@t.TeacherID</td>
+        <td>@t.Name</td>
+        <td>@t.Surname</td>
+        <td>@t.Gender</td>
+        <td>@t.Subject</td>
+        <td>@t.Age</td>
+        <td><a href="/default/DeleteTeacher/@t.TeacherID" class="btn btn-danger">Delete</a></td>
+        <td><a href="/default/GetTeacher/@t.TeacherID" class="btn btn-info">Update</a></td>
+        <td></td>
+       
+    </tr>
+    }
+</table>
+<a href="/default/NewTeacher/" class="btn btn-primary">Add New Teacher</a>
